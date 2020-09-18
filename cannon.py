@@ -86,12 +86,15 @@ def move():
 
     draw()
 
-    # Revisa si un objetivo no esta dentro de los rangos, en ese caso termina el movimiento
+    # Modificacion, en caso de que el objetivo salga del borde, se elimina y se reposiciona, asi no terminara el juego
     for target in targets:
         if not inside(target):
-            return
+            targets.remove(target)
+            y = randrange(-150, 150)
+            target = vector(200, y)
+            targets.append(target)
 
-    # Actualizaciones cada 50 milesimas de segundo de segundo
+    # Actualizaciones cada 50 milesimas de segundo
     ontimer(move, 50)
 
 setup(420, 420, 370, 0)
