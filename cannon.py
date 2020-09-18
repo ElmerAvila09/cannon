@@ -97,8 +97,8 @@ def move():
             target = vector(200, y)
             targets.append(target)
 
-    # Actualizaciones cada 50 milesimas de segundo
-    ontimer(move, 50)
+    # Actualizaciones cada 30 milesimas de segundo
+    ontimer(move, 30)
 
 setup(420, 420, 370, 0)
 hideturtle()
