@@ -11,6 +11,8 @@ def tap(x, y):
     if not inside(ball):
         ball.x = -199
         ball.y = -199
+
+        #Se reduce el valor del dividendo, por ende incrementando el total y mostrando un resultado que mueve la particula con una velocidad incrementada
         speed.x = (x + 200) / 15
         speed.y = (y + 200) / 15
 
@@ -39,6 +41,7 @@ def move():
         target = vector(200, y)
         targets.append(target)
 
+    #Se modifica el valor de cada bola al incrementar su velocidad del eje x, de 0.5 a 1
     for target in targets:
         target.x -= 1
 
